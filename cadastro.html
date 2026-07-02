@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - FAXINO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <form class="login-area cadastro-area">
+            <h2 class="cbv" style="text-align: center; margin-bottom: 5px;">Crie sua conta</h2>
+            <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: #666;">Preencha seus dados para começar</p>
+
+            <label class="ce">Nome Completo</label>
+            <input type="text" placeholder="Seu nome completo" required>
+
+            <div class="row">
+                <div class="input-group">
+                    <label class="ce">CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                </div>
+                <div class="input-group">
+                    <label class="ce">Data de Nasc.</label>
+                    <input type="date" required>
+                </div>
+            </div>
+
+            <label class="ce">Email</label>
+            <input type="email" placeholder="seu@email.com" required>
+
+            <div class="row">
+                <div class="input-group">
+                    <label class="ce">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(XX) 90000-0000" maxlength="15" required>
+                </div>
+                <div class="input-group">
+                    <label class="ce">Cidade</label>
+                    <input type="text" placeholder="Sua cidade" required>
+                </div>
+            </div>
+
+            <label class="ce">O que você busca?</label>
+            <div class="perfil-selector">
+                <input type="radio" name="perfil" id="trabalhar" value="trabalhar" hidden>
+                <label for="trabalhar" class="radio-card">Quero Trabalhar</label>
+
+                <input type="radio" name="perfil" id="contratar" value="contratar" hidden>
+                <label for="contratar" class="radio-card">Quero Contratar</label>
+            </div>
+
+            <button type="submit" style="margin-top: 10px;">Finalizar Cadastro</button>
+
+            <div class="register-area">
+                <p>Já tem conta? <a href="index.html">Fazer Login</a></p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const inputCPF = document.getElementById('cpf');
+        const inputTelefone = document.getElementById('telefone');
+        inputCPF.addEventListener('input', function(e){
+            let value = e.target.value.replace(/\D/g, "");
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            e.target.value = value;
+        });
+        inputTelefone.addEventListener('input', function(e){
+            let value = e.target.value.replace(/\D/g, "");
+            value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+            value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>

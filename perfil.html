@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - FAXINO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-feed.css">
+</head>
+<body class="feed-page">
+    <main class="container-feed" style="margin-top: 20px; padding: 0 15px;">
+        <div class="service-card" style="cursor: default; transform: none; border-color: transparent; text-align: center; padding: 30px 20px;">
+            <div id="avatar-usuario" style="width: 100px; height: 100px; background-color: #764ba2; color: white; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3); overflow: hidden;">
+                👤
+            </div>
+            <h2 id="perfil-nome" style="color: #333; margin-bottom: 5px; font-size: 1.4rem;">Jackson</h2>
+            <p id="perfil-cidade" style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">📍 São Paulo - SP</p>
+            <span style="background-color: #e0d4f5; color: #764ba2; padding: 6px 16px; border-radius: 15px; font-size: 0.85rem; font-weight: bold;">
+                Prestador / Contratante
+            </span>
+        </div>
+        <section style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div id="menu-publicacoes" class="service-card" style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; cursor: pointer;">
+                <span style="font-weight: 500; color: #333; display: flex; align-items: center; gap: 10px;">📋 <span>Minhas Publicações</span></span>
+                <span class="seta-ao-lado" style="color: #bbb; font-size: 0.9rem; transition: 0.3s;">❯</span>
+            </div>
+            <div id="menu-editar" class="service-card" style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; cursor: pointer;">
+                <span style="font-weight: 500; color: #333; display: flex; align-items: center; gap: 10px;">⚙️ <span>Editar Dados</span></span>
+                <span class="seta-ao-lado" style="color: #bbb; font-size: 0.9rem; transition: 0.3s;">❯</span>
+            </div>
+            <div id="menu-seguranca" class="service-card" style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; cursor: pointer;">
+                <span style="font-weight: 500; color: #333; display: flex; align-items: center; gap: 10px;">🛡️ <span>Segurança e Senha</span></span>
+                <span class="seta-ao-lado" style="color: #bbb; font-size: 0.9rem; transition: 0.3s;">❯</span>
+            </div>
+            <div id="btn-sair" class="service-card" style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; border: 1px solid #e74c3c; background-color: #fff5f5; cursor: pointer;">
+                <span style="font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 10px;">🚪 <span>Sair da Conta</span></span>
+                <span style="color: #e74c3c; font-size: 0.9rem;">❯</span>
+            </div>
+        </section>
+        <div id="painel-opcoes" class="service-card" style="display: none; margin-top: 20px; cursor: default; transform: none; border-color: transparent; padding: 20px; flex-direction: column; gap: 15px;">
+            </div>
+    </main>
+    <nav class="bottom-nav">
+        <a href="feed.html" class="nav-item">
+            <span class="icon">🏠</span>
+            <span class="label">Início</span>
+        </a>
+        <a href="publicar.html" class="nav-item center-btn" style="flex-shrink: 0;">
+            <span class="icon" style="font-size: 1.8rem; margin: 0;">➕</span>
+        </a>
+        <a href="perfil.html" class="nav-item active">
+            <span class="icon">👤</span>
+            <span class="label">Perfil</span>
+        </a>
+    </nav>
+    <div style="height: 100px;"></div>
+    <script src="script-perfil.js"></script>
+</body>
+</html>

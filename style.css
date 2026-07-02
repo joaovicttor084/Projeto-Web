@@ -1,0 +1,185 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 80px;
+    padding: 0 20px;
+}
+
+.apresentacao{
+    max-width: 400px;
+}
+
+.login-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.login-area{
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 320px;
+}
+
+.login-area input{
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-area input:focus{
+    border-color: #764ba2;
+    background-color: white;
+}
+
+.login-area button{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #764ba2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-area button:hover{
+    background-color: #5a367e;
+    transform: translateY(-2px);
+}
+
+.password-container{
+    position: relative;
+    display: flex;
+}
+
+.password-container input{
+    width: 100%;
+    height: 100%;
+    padding-right: 45px;
+}
+
+.eye-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.eye-icon:hover{
+    opacity: 1;
+}
+
+.link-small{
+    font-size: 0.85rem;
+    color: #667eea;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-top: -10px;
+}
+
+.register-area{
+    color: #b97cf6;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.register-area a{
+    color: #764ba2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-area a:hover, .link-small:hover{
+    text-decoration: underline;
+}
+
+.cadastro-area{
+    width: 600px;
+    max-width: 95%;
+}
+
+.row{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.perfil-selector{
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-card{
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.radio-card:hover{
+    border-color: #764ba2;
+    background-color: #f0ebf5;
+}
+
+input[type= "radio"]:checked + .radio-card{
+    background-color: #764ba2;
+    color: white;
+    border-color: #764ba2;
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+}
+
+.cbv{
+    color: #764ba2;
+}
+
+.ce{
+    color: #764ba2;
+}
+
+.cs{
+    color: #764ba2;
+}
+
+.b2{
+    color: #764ba2;
+}
