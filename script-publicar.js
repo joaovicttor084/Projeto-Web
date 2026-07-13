@@ -8,21 +8,21 @@ function atualizarFormulario(){
     const placeholderServico = isTrabalho ? "Ex: Faxina Residencial" : "Ex: Precisa-se de Cozinheiro";
     const labelValor = isTrabalho ? "Preço do seu serviço (R$)" : "Orçamento disponível (R$)";
     containerCampos.innerHTML = `
-        <div class= "campo-grupo">
+        <div class="campo-grupo">
             <label>${tituloPrincipal}</label>
-            <input type= "text" placeholder= "${placeholderServico}" required>
+            <input type="text" placeholder="${placeholderServico}" required>
         </div>
-        <div class= "filter-row" style= "display: flex; gap: 10px;">
-            <div class= "campo-grupo" style= "flex 1;">
+        <div class="filter-row" style="display: flex; gap: 10px;">
+            <div class="campo-grupo" style="flex: 1;">
                 <label>${labelValor}</label>
-                <input type= "number" placeholder= "0,00" required>
+                <input type="number" placeholder="0,00" required>
             </div>
-            <div class= "campo-grupo" style= "flex: 1;">
+            <div class="campo-grupo" style="flex: 1;">
                 <label>Cidade</label>
-                <input type= "text" placeholder = "Sua cidade" required>
+                <input type="text" placeholder="Sua cidade" required>
             </div>
         </div>
-        <div class= "campo-grupo">
+        <div class="campo-grupo">
             <label>Categoria</label>
             <select required>
                 <option value="">Selecione...</option>
@@ -32,15 +32,16 @@ function atualizarFormulario(){
                 <option value="outros">Outros</option>
             </select>
         </div>
-        <div  class= "campo-grupo">
+        <div class="campo-grupo">
             <label>Descrição Detalhada</label>
-            <textarea row="4" placeholder="Descreva os detalhes aqui..." requiredq></textarea>
+            <textarea rows="4" placeholder="Descreva os detalhes aqui..." required></textarea>
         </div>
     `;
 }
 radioTrabalhar.addEventListener('change', atualizarFormulario);
 radioContratar.addEventListener('change', atualizarFormulario);
 atualizarFormulario();
+
 document.getElementById('form-publicar').addEventListener('submit', function(e){
     e.preventDefault();
     alert("Publicação enviada com sucesso! (Simulação)");

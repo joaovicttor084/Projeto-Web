@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Publicação</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style-feed.css"> </head>
-    <body class="feed-page">
-        <main class="container-feed" style="margin-bottom:  100%;">
-            <header style="text-align: center; margin-bottom: 20px;">   
-                <h2>Nova Publicação</h2>
-                <p style="color: #666; font-size: 0.9rem;">O que você deseja fazer hoje?</p>
-            </header>
-            <form id="form-publicar">
-                <div class="tipo-selector" style="display: flex;gap: 10px; margin-bottom: 25px;">
-                    <input type="radio" name="tipo" id="tipo-trabalho" value="trabalhar" checked hidden>
-                    <label for="tipo-trabalho" class="tipo-btn" style="flex: 1; text-align: center; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 500;">Oferecer Serveço</label>
-                    <input type="radio" name="tipo" id="tipo-contratar" value="contratar" hidden>
-                    <label for="tipo-contratar" class="tipo-btn" style="flex: 1; text-align: center; padding: 12px; border: 1px solid #764ba2; border-radius: 8px; cursor: pointer; font-weight: 500;">Criar Vaga</label>
+    <link rel="stylesheet" href="style-feed.css"> 
+</head>
+<body class="feed-page">
+    <main class="container-feed" style="margin-bottom: 100px;">
+        <header style="text-align: center; margin-bottom: 20px;">   
+            <h2>Nova Publicação</h2>
+            <p style="color: #666; font-size: 0.9rem;">O que desejas fazer hoje?</p>
+        </header>
+        <form id="form-publicar">
+            <div class="tipo-selector" style="display: flex; gap: 10px; margin-bottom: 25px;">
+                <input type="radio" name="tipo" id="tipo-trabalho" value="trabalhar" checked hidden>
+                <label for="tipo-trabalho" class="tipo-btn" style="flex: 1; text-align: center; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 500;">Oferecer Serviço</label>
+                <input type="radio" name="tipo" id="tipo-contratar" value="contratar" hidden>
+                <label for="tipo-contratar" class="tipo-btn" style="flex: 1; text-align: center; padding: 12px; border: 1px solid #764ba2; border-radius: 8px; cursor: pointer; font-weight: 500;">Criar Vaga</label>
+            </div>
+            <div id="campos-dinamicos" class="service-card" style="cursor: default; transform: none; border-color: transparent; display: flex; flex-direction: column; gap: 15px; padding: 20px;">
                 </div>
-                <div id="campos-dinamicos" class="service-card" style="cursor: default; transform: none; border-color: transparent; display: flex; flex-direction: column; gap: 15px; padding: 20px;">
+            <button type="submit" style="width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: bold; margin-top: 20px; cursor: pointer; font-size: 1rem;">
+                Publicar Agora
+            </button>
+        </form>
+    </main>
 
-                </div>
-                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: bold; margin-top: 20px; cursor: pointer; font-size: 1rem;">
-                    Publicar Agora
-                </button>
-            </form>
-        </main>
-        <nav class="bottom-nav">
+    <nav class="bottom-nav">
         <a href="feed.html" class="nav-item">
             <span class="icon">🏠</span>
             <span class="label">Início</span>
@@ -35,16 +36,12 @@
         <a href="publicar.html" class="nav-item center-btn" style="flex-shrink: 0;">
             <span class="icon" style="font-size: 1.8rem; margin: 0;">➕</span>
         </a>
-        <a href="perfil.html" class="nav-item active">
+        <a href="perfil.html" class="nav-item">
             <span class="icon">👤</span>
             <span class="label">Perfil</span>
         </a>
     </nav>
-        <div style="height: 100px;"></div>
-        <script src="script-publicar.js"></script>
-    </body>
-</head>
-<body>
-    
+    <div style="height: 100px;"></div>
+    <script src="script-publicar.js"></script>
 </body>
 </html>

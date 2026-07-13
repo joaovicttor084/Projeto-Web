@@ -8,7 +8,7 @@ body.feed-page{
     max-width: 600px;
     margin: 0 auto;
 }
-.search-heard{
+.search-header{
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
@@ -123,7 +123,7 @@ body.feed-page{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index: 1000;
@@ -198,5 +198,5 @@ input[type="radio"]:checked + .tipo-btn{
 }
 
 .campo-grupo input:focus, .campo-grupo textarea:focus{
-    border: #764ba2;
+    border-color: #764ba2;
 }
