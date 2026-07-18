@@ -9,12 +9,12 @@
 </head>
 <body>
     <main class="container">
-        <form class="login-area cadastro-area">
+        <form class="login-area cadastro-area" id="form-cadastro">
             <h2 class="cbv" style="text-align: center; margin-bottom: 5px;">Crie sua conta</h2>
             <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: #666;">Preencha seus dados para começar</p>
 
             <label class="ce">Nome Completo</label>
-            <input type="text" placeholder="Seu nome completo" required>
+            <input type="text" id="nome" placeholder="Seu nome completo" required>
 
             <div class="row">
                 <div class="input-group">
@@ -23,13 +23,27 @@
                 </div>
                 <div class="input-group">
                     <label class="ce">Data de Nasc.</label>
-                    <input type="date" required>
+                    <input type="date" id="data-nasc" required>
                 </div>
             </div>
 
             <label class="ce">Email</label>
-            <input type="email" placeholder="seu@email.com" required>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+                        <div class="input-group" style="margin-top: 15px; position: relative;">
+                <label class="ce">Senha</label>
+                <div class="password-container" style="position: relative;">
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    <span class="eye-icon" onclick="togglePassword(this)">Ver</span>
+                </div>
+            </div>
 
+            <div class="input-group" style="margin-top: 15px; position: relative;">
+                <label class="ce">Confirmar Senha</label>
+                <div class="password-container" style="position: relative;">
+                    <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+                    <span class="eye-icon" onclick="togglePassword(this)">Ver</span>
+                </div>
+            </div>  
             <div class="row">
                 <div class="input-group">
                     <label class="ce">Telefone</label>
@@ -37,17 +51,8 @@
                 </div>
                 <div class="input-group">
                     <label class="ce">Cidade</label>
-                    <input type="text" placeholder="Sua cidade" required>
+                    <input type="text" id="cidade" placeholder="Sua cidade" required>
                 </div>
-            </div>
-
-            <label class="ce">O que você busca?</label>
-            <div class="perfil-selector">
-                <input type="radio" name="perfil" id="trabalhar" value="trabalhar" hidden>
-                <label for="trabalhar" class="radio-card">Quero Trabalhar</label>
-
-                <input type="radio" name="perfil" id="contratar" value="contratar" hidden>
-                <label for="contratar" class="radio-card">Quero Contratar</label>
             </div>
 
             <button type="submit" style="margin-top: 10px;">Finalizar Cadastro</button>
@@ -55,6 +60,7 @@
             <div class="register-area">
                 <p>Já tem conta? <a href="index.html">Fazer Login</a></p>
             </div>
+            
         </form>
     </main>
 
@@ -75,5 +81,7 @@
             e.target.value = value;
         });
     </script>
+    <script type="module" src="script-cadastro.js"></script>
+
 </body>
 </html>

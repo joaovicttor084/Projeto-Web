@@ -1,22 +1,23 @@
+import { auth } from './firebase-setup.js';
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
 const formLogin = document.getElementById('form-login');
 const emailInput = document.getElementById('email');
 const senhaInput = document.getElementById('senha');
-const linkEsqueci = document.getElementById('link-esqueci');
+
 if(formLogin){
-    formLogin.addEventListener('submit', function(event){
+    formLogin.addEventListener('submit', async (event) => {
         event.preventDefault();
         const email = emailInput.value;
         const senha = senhaInput.value;
-        if(email === "admin@teste.com" && senha === "123456"){
+
+        try {
+            await signInWithEmailAndPassword(auth, email, senha);
+            alert("Login realizado com sucesso!");
             window.location.href = "feed.html";
-        } else {
-            alert("Email ou Palavra-passe incorreto!");
+        } catch (error) {
+            alert("Erro ao entrar: Verifique seu e-mail e senha.");
+            console.error(error);
         }
-    });
-}
-if(linkEsqueci){
-    linkEsqueci.addEventListener('click', function(event){
-        event.preventDefault();
-        alert("Um link de recuperação será enviado para o teu email em breve!")
     });
 }

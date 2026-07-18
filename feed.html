@@ -1,4 +1,40 @@
-<nav class="bottom-nav">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Serviços - FAXINO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-feed.css">
+</head>
+<body class="feed-page">  
+    <main class="container-feed">
+        <header class="search-header">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Buscar serviços...">
+            </div>
+            <button id="btn-toggle-filtro" class="btn-filter">Filtros</button>
+        </header>
+
+        <div id="filter-panel" class="filter-panel">
+            <div class="filter-row">
+                <input type="number" placeholder="R$ Mín.">
+                <input type="number" placeholder="R$ Max.">
+            </div>
+            <input type="text" placeholder="Cidade">
+            <select>
+                <option value="">Selecione um Serviço</option>
+                <option value="faxina">Faxina</option>
+                <option value="cozinha">Cozinheira(o)</option>
+            </select>
+            <button id="btn-aplicar">Aplicar Filtros</button>
+        </div>
+        <div id="lista-vagas" class="container-vagas">
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
         <a href="feed.html" class="nav-item active">
             <span class="icon">🏠</span>
             <span class="label">Início</span>
@@ -11,3 +47,7 @@
             <span class="label">Perfil</span>
         </a>
     </nav>
+    <div style="height: 80px;"></div>
+    <script type="module" src="script-feed.js"></script>
+</body>
+</html>

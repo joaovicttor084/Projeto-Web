@@ -200,3 +200,75 @@ input[type="radio"]:checked + .tipo-btn{
 .campo-grupo input:focus, .campo-grupo textarea:focus{
     border-color: #764ba2;
 }
+
+.seta-ao-lado.aberto{
+    transform: rotate(90deg);
+    color: #764ba2 !important;
+}
+
+.perfil-footer{
+    text-align: center;
+    padding: 30px 20px 20px;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #666;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover{
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.footer-brand{
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.card-vaga{
+    backgroud-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #7c3aed;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margins-bottom: 20px;
+}
+
+.card-vaga h3{
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.3rem;
+}
+
+.btn-detalhes{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #7c3aed;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+
+.btn-detalhes:hover{
+    background-color: #6d28d9;
+}
